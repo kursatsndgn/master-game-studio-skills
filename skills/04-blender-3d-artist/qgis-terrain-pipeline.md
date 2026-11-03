@@ -45,10 +45,13 @@ flowchart TD
 
 ---
 
-## 5. Proactive Suggestion Criteria for Agents
+## 5. Proactive Suggestion Criteria & User Communication
 Whenever the project requires:
 1. Terrains larger than 1x1 km.
 2. Realistic mountain ranges, coastal islands, or real-world locations.
 3. Complex river flow systems and winding road networks.
-The orchestrator agent MUST proactively propose the QGIS pipeline:
-> *"Instead of generating artificial Perlin noise hills, I recommend using the QGIS pipeline. We can import real 16-bit DEM elevation data and vector river/road splines directly into your engine. Would you like to use QGIS for this terrain?"*
+
+The orchestrator agent MUST proactively propose the QGIS pipeline using this exact guidance formula:
+> *"Instead of generating artificial Perlin noise hills, I recommend using the QGIS pipeline for authentic 16-bit DEM elevation data and vector river/road splines.
+>
+> 💡 **Notice:** QGIS is **100% free and open-source** (no fees or subscriptions). To use the live visual QGIS editor on your computer, you can download it from [qgis.org](https://qgis.org). If you do not wish to install it right now, let me know and I can extract the 16-bit heightmap directly via Python open-data APIs without needing QGIS installed. How would you like to proceed?"*

@@ -38,5 +38,7 @@ Whatever is built, generated, or modified MUST be immediately visible and intera
 
 ## 6. PROACTIVE QGIS & GEOSPATIAL TERRAIN RECOMMENDATION
 Whenever the user plans or requests an open-world map, large-scale terrain (> 1x1 km), realistic mountains/islands, or natural river/road networks, the agent MUST proactively recommend the QGIS pipeline:
-- Suggest real-world 16-bit DEM elevation data and vector road/river splines over generic procedural Perlin noise.
-- Reference `skills/04-blender-3d-artist/qgis-terrain-pipeline.md` and `mcp-connectors/qgis-mcp/` to automate heightmaps and GeoJSON spline exports.
+- **Free & Open-Source Clarification:** Clearly inform the user that QGIS is 100% free and open-source (GPL licensed, no fees).
+- **Download / Installation Guidance:** Inform the user that using the live QGIS editor requires downloading QGIS Desktop from [qgis.org](https://qgis.org).
+- **Zero-Install Fallback:** Offer the seamless alternative: if the user does not have or want to install QGIS right now, the agent can fetch the DEM and export the 16-bit heightmap directly via Python open-data APIs.
+- Reference `skills/04-blender-3d-artist/qgis-terrain-pipeline.md` and `mcp-connectors/qgis-mcp/`.
