@@ -83,3 +83,15 @@ When kicking off a new game concept or vertical slice, invoke `/brainstorm` to i
 
 3. **Multi-Chat Execution Blueprint:**
    - Dedicated chat plan assigning specific sub-agents, context files, and initial prompts to each feature.
+
+---
+
+## 🛡️ Live Editor Transparency & Human Intervention (Golden Rule)
+
+Every automated action and asset generation step performed by AI sub-agents must strictly uphold developer autonomy:
+
+- **100% Hierarchy Visibility:** Every spawned object, mesh, light, trigger volume, or camera MUST be visible in the editor's hierarchy/outliner dock (Godot SceneTree, Unity Hierarchy, Blender Outliner, Unreal World Outliner). No ghost nodes or memory-only placeholders.
+- **Explicit Owner Assignment (Godot 4):** All dynamically instantiated nodes must explicitly execute `node.owner = EditorInterface.get_edited_scene_root()` so they appear in the editor scene tree.
+- **Direct Developer Intervention:** The developer can select, tweak properties, transform, or delete any generated node directly in the 2D/3D viewport and inspector dock at any time.
+- **Physical Disk Persistence:** All assets are serialized to disk (`.tscn`, `.prefab`, `.gltf`, `.blend`, `.tres`) to ensure instant FileSystem inspection.
+- **Native Undo/Redo Compliance:** Every engine modification registers with the editor undo system for full Ctrl+Z reversibility.

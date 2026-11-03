@@ -15,6 +15,7 @@ The `ql-story-ready` gate acts as the technical and design handover boundary bet
 | **QL-S03** | Environmental Prop Manifest | 3D artist asset audit | Required environmental storytelling props itemized with mesh budgets |
 | **QL-S04** | Pacing & Beat Budget | Combat & level design audit | Maximum traversal time between narrative beats does not exceed 90 seconds |
 | **QL-S05** | Fallback & Fail-Safe State | Engine dev check | Failure states (player leaves area, NPC dies) defined and scripted |
+| **QL-S06** | Live Editor Hierarchy Visibility | Scene dock audit | All generated nodes/actors registered in editor hierarchy with explicit owner set; 100% human-editable in viewport |
 
 ---
 
@@ -23,6 +24,7 @@ The `ql-story-ready` gate acts as the technical and design handover boundary bet
 - [ ] Quest state machine diagram attached (idle -> active -> objective_met -> resolved).
 - [ ] List of interactive props mapped to modular asset IDs (`MOD_PROP_01`, etc.).
 - [ ] NPC patrol routes, idle animation requirements, and voice trigger zones clearly marked in 3D coordinates.
+- [ ] All instantiated nodes have owner set to edited scene root (Godot) or registered with Undo (Unity) for full editor visibility and intervention.
 - [ ] `cd-narrative` gate cleared prior to requesting `ql-story-ready` evaluation.
 
 ---

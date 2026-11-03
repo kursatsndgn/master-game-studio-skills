@@ -63,3 +63,21 @@ func _physics_process(delta: float) -> void:
 - **M2 (Day 3):** Combat mechanics, enemy state machine, hit detection wired.
 - **M3 (Day 4):** Dialogue trigger box, subtitle UI, audio playback.
 - **M4 (Day 5):** QA audit, performance profiling (stable 60 FPS on baseline target).
+
+---
+
+## 4. Live Editor Transparency & Hierarchy Visibility
+To ensure the developer has 100% manual control over everything added by AI agents:
+1. **Explicit Owner Assignment in Godot 4:**
+   ```gdscript
+   # Whenever an agent or script adds a node to an edited scene:
+   var new_node = MeshInstance3D.new()
+   parent.add_child(new_node)
+   new_node.owner = EditorInterface.get_edited_scene_root() # CRITICAL: Makes node visible in SceneTree dock
+   ```
+2. **Unity Undo & Hierarchy Registration:**
+   ```csharp
+   GameObject go = PrefabUtility.InstantiatePrefab(prefab) as GameObject;
+   Undo.RegisterCreatedObjectUndo(go, "Agent Instantiated Prop"); // Registers with Undo stack & Hierarchy
+   ```
+3. **No Ghost Nodes:** Every spawned trigger, collider, light, and audio player must be selectable in the 2D/3D viewport and inspector dock.

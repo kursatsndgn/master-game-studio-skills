@@ -76,3 +76,19 @@ graph TD
   "bounding_box": [1.4, 0.9, 0.75]
 }
 ```
+
+---
+
+## 🛡️ 4. Mandatory Live Editor Transparency & Human Intervention Contract
+
+All agents operating through engine bridges or code generation must obey these strict rules:
+
+1. **Every Hierarchy Step Must Be Visible:**
+   - Any node or actor instantiated into an engine scene must be immediately visible in the editor's hierarchy dock (Godot SceneTree, Unity Hierarchy, Blender Outliner, UE5 World Outliner).
+   - In Godot 4: `node.owner = EditorInterface.get_edited_scene_root()` must be explicitly invoked for all dynamically added nodes so they register in the editor tree.
+2. **Full Human Modifiability:**
+   - Agents must never lock, hide, or create inaccessible runtime-only ghost objects. The human developer must be able to select, move, modify properties, or delete any generated entity directly in the editor viewport or inspector at any time.
+3. **Undo/Redo History Stack:**
+   - All mutations must register with the host editor's undo stack (e.g. `Undo.RegisterCreatedObjectUndo` in Unity, `EditorUndoRedoManager` in Godot, `undo_push` in Blender).
+4. **Physical Disk Serialization:**
+   - All assets must be saved as physical `.tscn`, `.prefab`, `.blend`, or `.gltf` files on disk, ensuring immediate FileSystem dock inspection.

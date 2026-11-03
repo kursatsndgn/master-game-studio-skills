@@ -18,6 +18,7 @@ When running within OpenAI Codex or GitHub Copilot:
 4. **`i-have-adhd` Micro-Task Slicing:** When implementing features, decompose them into atomic 3-5 minute micro-steps with clear binary success definitions.
 5. **Quality Gates:** Verify `cd-narrative` (dialogue & lore compliance) and `ql-story-ready` (graph integrity & level anchors) prior to engine integration.
 6. **Anti-Slop Standard:** Reject generic clichés ("ancient mystery", "boundless power"). Use explicit mathematical curves, tactile physics numbers, and grounded visual details.
+7. **Mandatory Live Editor Visibility & Human Intervention:** Whatever is created or modified MUST be immediately visible and selectable in the editor GUI (Godot SceneTree with explicit `node.owner` set, Unity Hierarchy with `Undo.RegisterCreatedObjectUndo`, Blender Outliner, UE5 World Outliner). The human developer must be able to click, inspect, move, and edit every single element directly in the viewport and inspector dock at any time. Zero ghost nodes; zero locked or opaque mutations.
 
 ---
 
