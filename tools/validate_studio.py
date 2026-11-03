@@ -11,7 +11,7 @@ from pathlib import Path
 def run_suite():
     repo_root = Path(__file__).resolve().parent.parent
     print("=" * 70)
-    print("  MASTER GAME STUDIO SKILLS (ANTIGRAVITY BUILD) - REPO AUDITOR")
+    print("  MASTER GAME STUDIO SKILLS - REPO AUDITOR")
     print("=" * 70)
 
     errors = []

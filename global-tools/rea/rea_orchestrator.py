@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 rea_orchestrator.py - Autonomous Studio Automation & Workspace Companion
-Part of Master Game Studio Skills (Antigravity Build)
+Part of Master Game Studio Skills
 """
 
 import sys

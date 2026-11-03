@@ -1,4 +1,4 @@
-# Master Game Studio Skills (Antigravity Build)
+# Master Game Studio Skills
 
 Autonomous, multi-agent game development framework powered by the **`pamirtuna/gamestudio-subagents`** backbone and **`Claude-Code-Game-Studios`** production discipline.
 
