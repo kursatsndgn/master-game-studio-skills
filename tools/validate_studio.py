@@ -22,6 +22,8 @@ def run_suite():
     expected_files = [
         "README.md",
         ".cursorrules",
+        "CODEX.md",
+        "AGENTS.md",
         ".gitignore",
         "LICENSE",
         "CONTRIBUTING.md",
