@@ -19,6 +19,7 @@ When running within OpenAI Codex or GitHub Copilot:
 5. **Quality Gates:** Verify `cd-narrative` (dialogue & lore compliance) and `ql-story-ready` (graph integrity & level anchors) prior to engine integration.
 6. **Anti-Slop Standard:** Reject generic clichés ("ancient mystery", "boundless power"). Use explicit mathematical curves, tactile physics numbers, and grounded visual details.
 7. **Mandatory Live Editor Visibility & Human Intervention:** Whatever is created or modified MUST be immediately visible and selectable in the editor GUI (Godot SceneTree with explicit `node.owner` set, Unity Hierarchy with `Undo.RegisterCreatedObjectUndo`, Blender Outliner, UE5 World Outliner). The human developer must be able to click, inspect, move, and edit every single element directly in the viewport and inspector dock at any time. Zero ghost nodes; zero locked or opaque mutations.
+8. **Proactive QGIS Geospatial Recommendation:** Whenever designing large-scale terrains (> 1x1 km), natural mountain ranges, islands, or realistic river/road networks, proactively recommend the QGIS pipeline (`skills/04-blender-3d-artist/qgis-terrain-pipeline.md`) to generate authentic 16-bit DEM heightmaps and vector splines.
 
 ---
 
@@ -56,6 +57,7 @@ When generating code or assets, reference the specialized skill modules:
   - Godot 4 bridge: `mcp-connectors/godot-mcp/godot_mcp_bridge.py` (Port 9080)
   - Unity bridge: `mcp-connectors/unity-mcp/unity_mcp_bridge.py` (Port 8080)
   - Unreal 5 bridge: `mcp-connectors/unreal-mcp/unreal_mcp_bridge.py` (Port 30010)
+  - QGIS bridge: `mcp-connectors/qgis-mcp/qgis_mcp_bridge.py` (Port 9877) & `skills/04-blender-3d-artist/qgis-terrain-pipeline.md`
 
 ---
 

@@ -43,6 +43,17 @@
       "env": {
         "UNREAL_RC_PORT": "30010"
       }
+    },
+    "qgis-mcp": {
+      "command": "python",
+      "args": [
+        "mcp-connectors/qgis-mcp/qgis_mcp_bridge.py",
+        "--port",
+        "9877"
+      ],
+      "env": {
+        "QGIS_TCP_PORT": "9877"
+      }
     }
   }
 }

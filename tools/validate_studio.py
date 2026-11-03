@@ -39,6 +39,7 @@ def run_suite():
         "skills/02-narrative-&-world/character-dialogue.md",
         "skills/03-game-design/design-core.md",
         "skills/04-blender-3d-artist/3d-pipeline.md",
+        "skills/04-blender-3d-artist/qgis-terrain-pipeline.md",
         "skills/04-blender-3d-artist/scripts/blender_prop_generator.py",
         "skills/05-game-engine-dev/vertical-slice.md",
         "skills/05-game-engine-dev/procedural-dungeon.md",
@@ -56,6 +57,8 @@ def run_suite():
         "mcp-connectors/unity-mcp/unity_mcp_bridge.py",
         "mcp-connectors/unreal-mcp/SKILL.md",
         "mcp-connectors/unreal-mcp/unreal_mcp_bridge.py",
+        "mcp-connectors/qgis-mcp/SKILL.md",
+        "mcp-connectors/qgis-mcp/qgis_mcp_bridge.py",
     ]
 
     print("[1/3] Verifying core file registry...")

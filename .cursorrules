@@ -35,3 +35,8 @@ Whatever is built, generated, or modified MUST be immediately visible and intera
 - **Full Human Modifiability:** The developer MUST be able to click, inspect, move, re-parent, or delete any entity directly in the editor viewport or inspector at any time.
 - **Physical Disk Persistence:** Never leave assets as transient in-memory objects; serialize all scenes (`.tscn`), prefabs (`.prefab`), meshes (`.gltf`), and materials (`.tres`/`.mat`) directly to disk.
 - **Undo/Redo Integrity:** All modifications must support native Ctrl+Z editor undo operations.
+
+## 6. PROACTIVE QGIS & GEOSPATIAL TERRAIN RECOMMENDATION
+Whenever the user plans or requests an open-world map, large-scale terrain (> 1x1 km), realistic mountains/islands, or natural river/road networks, the agent MUST proactively recommend the QGIS pipeline:
+- Suggest real-world 16-bit DEM elevation data and vector road/river splines over generic procedural Perlin noise.
+- Reference `skills/04-blender-3d-artist/qgis-terrain-pipeline.md` and `mcp-connectors/qgis-mcp/` to automate heightmaps and GeoJSON spline exports.

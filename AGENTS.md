@@ -28,6 +28,7 @@ graph TD
     MCP_Router --> MCP_Godot["godot-mcp (Port 9080)"]
     MCP_Router --> MCP_Unity["unity-mcp (Port 8080)"]
     MCP_Router --> MCP_Unreal["unreal-mcp (Port 30010)"]
+    MCP_Router --> MCP_QGIS["qgis-mcp (Port 9877)"]
     
     MCP_Router --> UI["@art-director / @ui-ux-designer"]
     UI --> QA["@qa-auditor (Strix & Anti-Slop)"]
@@ -48,6 +49,7 @@ graph TD
 | **`@art-director`** | `skills/06-ui-ux-graphics/hud-and-2d.md` | UI briefs, theme palettes | HUD layouts, AAA contrast specs, `mcptoon` 2D art |
 | **`@audio-narrative-engineer`**| `skills/07-audio-narrative/multimedia-pipeline.md` | Approved dialogue scripts | OpenVoice audio files, Remotion React video cutscenes |
 | **`@qa-auditor`** | `skills/08-qa-security-audit/audit-pipeline.md` | Engine scripts, narrative docs | Strix security vulnerability reports, anti-slop checks |
+| **`@geospatial-architect`** | `skills/04-blender-3d-artist/qgis-terrain-pipeline.md` | Target coordinates, DEM sources | 16-bit DEM heightmaps, slope splatmasks, vector road/river GeoJSON |
 
 ---
 

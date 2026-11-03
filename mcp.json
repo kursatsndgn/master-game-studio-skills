@@ -47,6 +47,18 @@
         "UNREAL_RC_PORT": "30010"
       },
       "description": "Unreal Engine 5 MCP connector for Python Remote Execution, Actor spawning and Nanite/Lumen config"
+    },
+    "qgis-mcp": {
+      "command": "python",
+      "args": [
+        "mcp-connectors/qgis-mcp/qgis_mcp_bridge.py",
+        "--port",
+        "9877"
+      ],
+      "env": {
+        "QGIS_TCP_PORT": "9877"
+      },
+      "description": "QGIS Desktop MCP connector for automated DEM heightmaps, slope splatmaps, and vector road/river splines"
     }
   }
 }

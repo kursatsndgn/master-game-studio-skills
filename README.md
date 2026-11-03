@@ -19,7 +19,8 @@ master-game-studio-skills/
 │   ├── blender-mcp/               # Blender 4.x JSON-RPC stdio bridge (Port 9876)
 │   ├── godot-mcp/                 # Godot 4 EditorPlugin TCP/WebSocket bridge (Port 9080)
 │   ├── unity-mcp/                 # Unity EditorWindow WebSocket bridge (Port 8080)
-│   └── unreal-mcp/                # Unreal Engine 5 Web Remote Control bridge (Port 30010)
+│   ├── unreal-mcp/                # Unreal Engine 5 Web Remote Control bridge (Port 30010)
+│   └── qgis-mcp/                  # QGIS Desktop FastMCP stdio bridge (Port 9877)
 ├── global-tools/
 │   └── rea                        # Autonomous workflow & environment automation assistant
 ├── .claude/
@@ -36,7 +37,8 @@ master-game-studio-skills/
     ├── 03-game-design/            # Mechanics, combat, level design & economy
     │   └── design-core.md         # Balance rules, graphify progression & modly asset integration
     ├── 04-blender-3d-artist/      # 3D pipeline & procedural modeling
-    │   └── 3d-pipeline.md         # Blender Python MCP, retopology, PBR & modular assembly
+    │   ├── 3d-pipeline.md         # Blender Python MCP, retopology, PBR & modular assembly
+    │   └── qgis-terrain-pipeline.md # QGIS DEM elevation, 16-bit heightmaps & Blender-GIS
     ├── 05-game-engine-dev/        # Engine implementation (Godot 4, Unity)
     │   ├── vertical-slice.md      # 15-minute playable prototype pipeline
     │   └── procedural-dungeon.md  # watabou procedural dungeon & city map generation
