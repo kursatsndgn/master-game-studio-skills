@@ -1,0 +1,48 @@
+{
+  "mcpServers": {
+    "blender-mcp": {
+      "command": "python",
+      "args": [
+        "mcp-connectors/blender-mcp/blender_mcp_bridge.py",
+        "--port",
+        "9876"
+      ],
+      "env": {
+        "BLENDER_PORT": "9876"
+      }
+    },
+    "godot-mcp": {
+      "command": "python",
+      "args": [
+        "mcp-connectors/godot-mcp/godot_mcp_bridge.py",
+        "--port",
+        "9080"
+      ],
+      "env": {
+        "GODOT_WS_PORT": "9080"
+      }
+    },
+    "unity-mcp": {
+      "command": "python",
+      "args": [
+        "mcp-connectors/unity-mcp/unity_mcp_bridge.py",
+        "--port",
+        "8080"
+      ],
+      "env": {
+        "UNITY_PORT": "8080"
+      }
+    },
+    "unreal-mcp": {
+      "command": "python",
+      "args": [
+        "mcp-connectors/unreal-mcp/unreal_mcp_bridge.py",
+        "--port",
+        "30010"
+      ],
+      "env": {
+        "UNREAL_RC_PORT": "30010"
+      }
+    }
+  }
+}

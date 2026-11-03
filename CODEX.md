@@ -49,6 +49,13 @@ When generating code or assets, reference the specialized skill modules:
   - Path: `skills/08-qa-security-audit/audit-pipeline.md`
   - Checks for unsafe deserialization, packet spoofing, and AI slop.
 
+- **Live Engine MCP Bridges (`mcp-connectors/`):**
+  - Config: `mcp.json` & `.cursor/mcp.json`
+  - Blender bridge: `mcp-connectors/blender-mcp/blender_mcp_bridge.py` (Port 9876)
+  - Godot 4 bridge: `mcp-connectors/godot-mcp/godot_mcp_bridge.py` (Port 9080)
+  - Unity bridge: `mcp-connectors/unity-mcp/unity_mcp_bridge.py` (Port 8080)
+  - Unreal 5 bridge: `mcp-connectors/unreal-mcp/unreal_mcp_bridge.py` (Port 30010)
+
 ---
 
 ## 💡 3. PRE-PRODUCTION PROTOCOL (`/brainstorm`)

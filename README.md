@@ -9,7 +9,17 @@ Autonomous, multi-agent game development framework powered by the **`pamirtuna/g
 ```text
 master-game-studio-skills/
 ├── README.md                      # Repo documentation, commands, and workflow guide
+├── CODEX.md                       # OpenAI Codex & GitHub Copilot root instructions
+├── AGENTS.md                      # Multi-agent coordination hierarchy & JSON contracts
+├── mcp.json                       # Universal Model Context Protocol configuration
+├── .cursor/                       # Cursor Editor configuration & MCP registry
+│   └── mcp.json                   # Cursor native MCP connector bindings
 ├── .cursorrules                   # Global AI agent rules (120-char dialogue cap, Lore tiers, etc.)
+├── mcp-connectors/                # Live Engine & DCC tool MCP bridges
+│   ├── blender-mcp/               # Blender 4.x JSON-RPC stdio bridge (Port 9876)
+│   ├── godot-mcp/                 # Godot 4 EditorPlugin TCP/WebSocket bridge (Port 9080)
+│   ├── unity-mcp/                 # Unity EditorWindow WebSocket bridge (Port 8080)
+│   └── unreal-mcp/                # Unreal Engine 5 Web Remote Control bridge (Port 30010)
 ├── global-tools/
 │   └── rea                        # Autonomous workflow & environment automation assistant
 ├── .claude/

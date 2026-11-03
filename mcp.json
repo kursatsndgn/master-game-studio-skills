@@ -1,0 +1,52 @@
+{
+  "mcpServers": {
+    "blender-mcp": {
+      "command": "python",
+      "args": [
+        "mcp-connectors/blender-mcp/blender_mcp_bridge.py",
+        "--port",
+        "9876"
+      ],
+      "env": {
+        "BLENDER_PORT": "9876"
+      },
+      "description": "Blender 4.x Model Context Protocol connector for procedural modeling, UV, materials and glTF export"
+    },
+    "godot-mcp": {
+      "command": "python",
+      "args": [
+        "mcp-connectors/godot-mcp/godot_mcp_bridge.py",
+        "--port",
+        "9080"
+      ],
+      "env": {
+        "GODOT_WS_PORT": "9080"
+      },
+      "description": "Godot 4 Editor & SceneTree MCP connector for live scene manipulation and GDScript execution"
+    },
+    "unity-mcp": {
+      "command": "python",
+      "args": [
+        "mcp-connectors/unity-mcp/unity_mcp_bridge.py",
+        "--port",
+        "8080"
+      ],
+      "env": {
+        "UNITY_PORT": "8080"
+      },
+      "description": "Unity Editor MCP connector for GameObject hierarchy, Prefab assembly and Playmode testing"
+    },
+    "unreal-mcp": {
+      "command": "python",
+      "args": [
+        "mcp-connectors/unreal-mcp/unreal_mcp_bridge.py",
+        "--port",
+        "30010"
+      ],
+      "env": {
+        "UNREAL_RC_PORT": "30010"
+      },
+      "description": "Unreal Engine 5 MCP connector for Python Remote Execution, Actor spawning and Nanite/Lumen config"
+    }
+  }
+}

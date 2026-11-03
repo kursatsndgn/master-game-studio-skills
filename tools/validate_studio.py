@@ -45,6 +45,17 @@ def run_suite():
         "skills/06-ui-ux-graphics/hud-and-2d.md",
         "skills/07-audio-narrative/multimedia-pipeline.md",
         "skills/08-qa-security-audit/audit-pipeline.md",
+        "mcp.json",
+        ".cursor/mcp.json",
+        "mcp-connectors/README.md",
+        "mcp-connectors/blender-mcp/SKILL.md",
+        "mcp-connectors/blender-mcp/blender_mcp_bridge.py",
+        "mcp-connectors/godot-mcp/SKILL.md",
+        "mcp-connectors/godot-mcp/godot_mcp_bridge.py",
+        "mcp-connectors/unity-mcp/SKILL.md",
+        "mcp-connectors/unity-mcp/unity_mcp_bridge.py",
+        "mcp-connectors/unreal-mcp/SKILL.md",
+        "mcp-connectors/unreal-mcp/unreal_mcp_bridge.py",
     ]
 
     print("[1/3] Verifying core file registry...")

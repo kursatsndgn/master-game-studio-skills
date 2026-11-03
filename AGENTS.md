@@ -14,16 +14,22 @@ graph TD
     Director --> Narrative["@game-writer / @narrative-director"]
     Director --> Designer["@game-designer"]
     Director --> Artist3D["@3d-artist (Blender MCP)"]
-    Director --> Engine["@engine-developer (Godot 4 / Unity)"]
+    Director --> Engine["@engine-developer (Godot / Unity / UE5)"]
     
     Narrative --> Gate1["Gate: cd-narrative"]
     Gate1 --> Audio["@audio-narrative-engineer (OpenVoice/Remotion)"]
     
     Designer --> Gate2["Gate: ql-story-ready"]
     Gate2 --> Engine
-    Artist3D --> Engine
+    Artist3D --> MCP_Router{"Engine MCP Connectors"}
+    Engine --> MCP_Router
     
-    Engine --> UI["@art-director / @ui-ux-designer"]
+    MCP_Router --> MCP_Blender["blender-mcp (Port 9876)"]
+    MCP_Router --> MCP_Godot["godot-mcp (Port 9080)"]
+    MCP_Router --> MCP_Unity["unity-mcp (Port 8080)"]
+    MCP_Router --> MCP_Unreal["unreal-mcp (Port 30010)"]
+    
+    MCP_Router --> UI["@art-director / @ui-ux-designer"]
     UI --> QA["@qa-auditor (Strix & Anti-Slop)"]
     Audio --> QA
 ```
