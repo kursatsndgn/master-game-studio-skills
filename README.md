@@ -46,8 +46,10 @@ master-game-studio-skills/
     │   └── hud-and-2d.md          # ui-ux-pro-max-skill, taste-skill & mcptoon comic art
     ├── 07-audio-narrative/        # Audio cloning & cinematic rendering
     │   └── multimedia-pipeline.md # OpenVoice speech cloning & Remotion React cutscenes
-    └── 08-qa-security-audit/      # Quality assurance & security
-        └── audit-pipeline.md      # Strix security audit, no-ai-slop filter & skillspector
+    ├── 08-qa-security-audit/      # Quality assurance & security
+    │   └── audit-pipeline.md      # Strix security audit, no-ai-slop filter & skillspector
+    └── 09-playtest-&-feedback/    # FINAL STEP: human-like playtest & feature handoff
+        └── playtester.md          # Open-Godot-MCP deterministic play, playtest-lab bots/personas, fun/friction report
 ```
 
 ---
@@ -64,6 +66,7 @@ master-game-studio-skills/
 | **@art-director / @ui-ux** | `ui-ux-pro-max-skill`, `taste-skill`, `mcptoon` | HUD layout, typography, 2D art & comic-style illustrations |
 | **@audio-narrative-engineer** | `openvoice`, `remotion` | Neural voice generation, programmatic video cutscenes |
 | **@qa-auditor** | `strix`, `no-ai-slop`, `skillspector` | Security vulnerability auditing, AI slop removal, code quality |
+| **@playtester** | `Open-Godot-MCP`, `playtest-lab`, `claude-game-playtest-skills` | Final gate: plays the build like a human, finds fun & friction, hands fixes to features |
 | **Global Tools** | `rea`, `claude-mem` | Autonomous local agent assistance & persistent project memory |
 
 ---
@@ -97,3 +100,30 @@ Every automated action and asset generation step performed by AI sub-agents must
 - **Direct Developer Intervention:** The developer can select, tweak properties, transform, or delete any generated node directly in the 2D/3D viewport and inspector dock at any time.
 - **Physical Disk Persistence:** All assets are serialized to disk (`.tscn`, `.prefab`, `.gltf`, `.blend`, `.tres`) to ensure instant FileSystem inspection.
 - **Native Undo/Redo Compliance:** Every engine modification registers with the editor undo system for full Ctrl+Z reversibility.
+
+---
+
+## 🎮 Final Step: Human-Like Playtest (`@playtester`)
+
+The last stage of every feature cycle. After QA passes, `@playtester` plays the build from the start like a real player and
+decides whether it is *fun*, not just whether it works.
+
+1. **Deterministic play** via [Open-Godot-MCP](https://github.com/masteryee-labs/Open-Godot-MCP): freeze the clock, decide, step
+   exact milliseconds with inputs, screenshot, verify state. Co-op tested with host/client instances, latency and sync checks.
+2. **Bot sweep** via [playtest-lab](https://github.com/miandbits/playtest-lab): many seeds for crashes, softlocks, skill gradient, dominant strategy.
+3. **Personas**: first-timer, speedrunner, explorer, rule-breaker, co-op.
+4. **Measured signals**: dead time, inputs per task, input→feedback latency, missing feedback, repeated deaths, FPS.
+5. **Report + work cards** (`playtest/YYYY-MM-DD-<section>.md`) routed to the owning feature (F00..Fn). Nothing is fixed
+   or dispatched without the developer's approval; fixes are re-played to close each finding.
+6. **Optional channel**: the developer's narrated recording reviewed with
+   [claude-game-playtest-skills](https://github.com/jrejaud/claude-game-playtest-skills).
+
+Setup:
+```bash
+git clone https://github.com/masteryee-labs/Open-Godot-MCP && cd Open-Godot-MCP && uv tool install .
+claude mcp add -s user open-godot-mcp -- open-godot-mcp
+git clone https://github.com/miandbits/playtest-lab ~/.claude/skills/playtest-lab
+claude plugin marketplace add https://github.com/jrejaud/claude-game-playtest-skills
+claude plugin install game-playtest-skills@game-playtest
+```
+Requires Godot 4.5+ (the addon goes in `addons/open_godot_mcp` and must be enabled in Project Settings → Plugins), Python 3.11+, uv, Node 20+.

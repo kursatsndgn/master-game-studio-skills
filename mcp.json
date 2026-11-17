@@ -59,6 +59,11 @@
         "QGIS_TCP_PORT": "9877"
       },
       "description": "QGIS Desktop MCP connector for automated DEM heightmaps, slope splatmaps, and vector road/river splines"
+    },
+    "open-godot-mcp": {
+      "command": "open-godot-mcp",
+      "args": [],
+      "description": "Open-Godot-MCP: deterministic playtesting (freeze/step clock, input injection, screenshots, multiplayer instances) for the @playtester final step"
     }
   }
 }

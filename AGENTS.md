@@ -33,6 +33,8 @@ graph TD
     MCP_Router --> UI["@art-director / @ui-ux-designer"]
     UI --> QA["@qa-auditor (Strix & Anti-Slop)"]
     Audio --> QA
+    QA --> Playtester["@playtester (FINAL: Open-Godot-MCP + playtest-lab)"]
+    Playtester -->|"work cards, developer approval"| Director
 ```
 
 ---
@@ -49,6 +51,7 @@ graph TD
 | **`@art-director`** | `skills/06-ui-ux-graphics/hud-and-2d.md` | UI briefs, theme palettes | HUD layouts, AAA contrast specs, `mcptoon` 2D art |
 | **`@audio-narrative-engineer`**| `skills/07-audio-narrative/multimedia-pipeline.md` | Approved dialogue scripts | OpenVoice audio files, Remotion React video cutscenes |
 | **`@qa-auditor`** | `skills/08-qa-security-audit/audit-pipeline.md` | Engine scripts, narrative docs | Strix security vulnerability reports, anti-slop checks |
+| **`@playtester`** (final step) | `skills/09-playtest-&-feedback/playtester.md` | QA-passed build, GDD, feature list | Playtest report, fun/friction findings, per-feature work cards |
 | **`@geospatial-architect`** | `skills/04-blender-3d-artist/qgis-terrain-pipeline.md` | Target coordinates, DEM sources | 16-bit DEM heightmaps, slope splatmasks, vector road/river GeoJSON |
 
 ---
