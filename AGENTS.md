@@ -26,9 +26,9 @@ graph TD
     
     MCP_Router --> MCP_Blender["blender-mcp (Port 9876)"]
     MCP_Router --> MCP_Godot["godot-mcp (Port 9080)"]
-    MCP_Router --> MCP_Unity["unity-mcp (Port 8080)"]
+    MCP_Router --> MCP_Unity["unity-mcp (stdio, CoplayDev)"]
     MCP_Router --> MCP_Unreal["unreal-mcp (Port 30010)"]
-    MCP_Router --> MCP_QGIS["qgis-mcp (Port 9877)"]
+    MCP_Router --> MCP_QGIS["qgis-mcp (Port 9876, jjsantos01)"]
     
     MCP_Router --> UI["@art-director / @ui-ux-designer"]
     UI --> QA["@qa-auditor (Strix & Anti-Slop)"]

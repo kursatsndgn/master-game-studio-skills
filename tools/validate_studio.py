@@ -54,11 +54,11 @@ def run_suite():
         "mcp-connectors/godot-mcp/SKILL.md",
         "mcp-connectors/godot-mcp/godot_mcp_bridge.py",
         "mcp-connectors/unity-mcp/SKILL.md",
-        "mcp-connectors/unity-mcp/unity_mcp_bridge.py",
+        "mcp-connectors/unity-mcp/upstream/Server/pyproject.toml",
         "mcp-connectors/unreal-mcp/SKILL.md",
         "mcp-connectors/unreal-mcp/unreal_mcp_bridge.py",
         "mcp-connectors/qgis-mcp/SKILL.md",
-        "mcp-connectors/qgis-mcp/qgis_mcp_bridge.py",
+        "mcp-connectors/qgis-mcp/upstream/src/qgis_mcp/qgis_mcp_server.py",
     ]
 
     print("[1/3] Verifying core file registry...")

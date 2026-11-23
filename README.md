@@ -18,9 +18,9 @@ master-game-studio-skills/
 ├── mcp-connectors/                # Live Engine & DCC tool MCP bridges
 │   ├── blender-mcp/               # Blender 4.x JSON-RPC stdio bridge (Port 9876)
 │   ├── godot-mcp/                 # Godot 4 EditorPlugin TCP/WebSocket bridge (Port 9080)
-│   ├── unity-mcp/                 # Unity EditorWindow WebSocket bridge (Port 8080)
+│   ├── unity-mcp/                 # MCP for Unity: CoplayDev/unity-mcp submodule (stdio)
 │   ├── unreal-mcp/                # Unreal Engine 5 Web Remote Control bridge (Port 30010)
-│   └── qgis-mcp/                  # QGIS Desktop FastMCP stdio bridge (Port 9877)
+│   └── qgis-mcp/                  # QGIS MCP: jjsantos01/qgis_mcp submodule (plugin port 9876)
 ├── global-tools/
 │   └── rea                        # Autonomous workflow & environment automation assistant
 ├── .claude/

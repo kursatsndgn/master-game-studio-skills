@@ -5,7 +5,7 @@ description: Model Context Protocol (MCP) bridge for QGIS Desktop (OSGeo). Enabl
 
 # QGIS MCP Connector Skill
 
-The **QGIS MCP Connector** connects AI agents to a live or headless QGIS environment using the open-source `qgis-mcp` architecture (FastMCP stdio bridge to local QGIS TCP socket on port 9877).
+The **QGIS MCP Connector** connects AI agents to a live or headless QGIS environment using the open-source `qgis-mcp` architecture (FastMCP stdio bridge to local QGIS TCP socket on port 9876).
 
 ---
 
@@ -14,7 +14,7 @@ The **QGIS MCP Connector** connects AI agents to a live or headless QGIS environ
 ```mermaid
 flowchart LR
     Agent["AI Agent (Codex / Cursor / Claude)"] <-->|MCP JSON-RPC (stdio)| Bridge["qgis_mcp_bridge.py"]
-    Bridge <-->|TCP Socket (Port 9877)| Plugin["QGIS Desktop (QGIS MCP Plugin)"]
+    Bridge <-->|TCP Socket (Port 9876)| Plugin["QGIS Desktop (QGIS MCP Plugin)"]
     Plugin <--> QGISEngine["QGIS Processing Core (GDAL, GRASS, PyQGIS)"]
 ```
 
@@ -59,5 +59,5 @@ Executes an arbitrary PyQGIS script directly inside the active QGIS Desktop canv
 1. Open **QGIS Desktop** (Free download from [qgis.org](https://qgis.org)).
 2. Go to **Plugins > Manage and Install Plugins**.
 3. Search for **QGIS MCP** and click **Install Plugin**.
-4. Click the **QGIS MCP** toolbar icon to start the local socket listener on port `9877`.
+4. Click the **QGIS MCP** toolbar icon to start the local socket listener on port `9876`.
 5. Your AI assistant will now automatically discover and manipulate active GIS layers.

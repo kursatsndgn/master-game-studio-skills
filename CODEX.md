@@ -55,9 +55,9 @@ When generating code or assets, reference the specialized skill modules:
   - Config: `mcp.json` & `.cursor/mcp.json`
   - Blender bridge: `mcp-connectors/blender-mcp/blender_mcp_bridge.py` (Port 9876)
   - Godot 4 bridge: `mcp-connectors/godot-mcp/godot_mcp_bridge.py` (Port 9080)
-  - Unity bridge: `mcp-connectors/unity-mcp/unity_mcp_bridge.py` (Port 8080)
+  - Unity bridge: `mcp-connectors/unity-mcp/upstream` (CoplayDev/unity-mcp submodule, stdio)
   - Unreal 5 bridge: `mcp-connectors/unreal-mcp/unreal_mcp_bridge.py` (Port 30010)
-  - QGIS bridge: `mcp-connectors/qgis-mcp/qgis_mcp_bridge.py` (Port 9877) & `skills/04-blender-3d-artist/qgis-terrain-pipeline.md`
+  - QGIS bridge: `mcp-connectors/qgis-mcp/upstream` (jjsantos01/qgis_mcp submodule, port 9876) & `skills/04-blender-3d-artist/qgis-terrain-pipeline.md`
 
 ---
 

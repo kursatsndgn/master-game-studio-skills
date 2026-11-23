@@ -13,7 +13,7 @@ flowchart TD
     
     Router -->|JSON-RPC / stdio (Port 9876)| BlenderMCP["blender-mcp\n(Blender 4.x / bpy)"]
     Router -->|JSON-RPC / TCP (Port 9080)| GodotMCP["godot-mcp\n(Godot 4 EditorPlugin)"]
-    Router -->|JSON-RPC / WS (Port 8080)| UnityMCP["unity-mcp\n(Unity EditorWindow)"]
+    Router -->|stdio| UnityMCP["unity-mcp\n(Unity EditorWindow)"]
     Router -->|JSON-RPC / HTTP (Port 30010)| UnrealMCP["unreal-mcp\n(UE5 Web Remote Control)"]
 ```
 
@@ -21,7 +21,7 @@ flowchart TD
 |---|---|---|---|
 | **`blender-mcp`** | Blender 4.x | `9876` (IPC / stdio) | Procedural 3D modeling, UV unwrapping, PBR shaders, viewport render, glTF export |
 | **`godot-mcp`** | Godot 4.x | `9080` (WebSocket / TCP) | SceneTree inspection, node instancing, GDScript execution, FileSystem re-import |
-| **`unity-mcp`** | Unity 2022+ / Unity 6 | `8080` (WebSocket / HTTP) | GameObject hierarchy, Prefab placement, AssetDatabase refresh, Playmode testing |
+| **`unity-mcp`** | Unity 2022+ / Unity 6 | stdio (CoplayDev/unity-mcp submodule) | GameObject hierarchy, Prefab placement, AssetDatabase refresh, Playmode testing |
 | **`unreal-mcp`** | Unreal Engine 5.x | `30010` (Web Remote Control) | Python Remote Execution, Level Actor spawn, Nanite/Lumen configuration |
 
 ---
@@ -37,3 +37,8 @@ flowchart TD
    python mcp-connectors/unity-mcp/unity_mcp_bridge.py
    python mcp-connectors/unreal-mcp/unreal_mcp_bridge.py
    ```
+
+## Çalışan bağlantılar (alt modül)
+Unity ve QGIS köprüleri artık çalışan topluluk sunucularıdır (`git clone --recurse-submodules`; Windows'ta önce `git config --global core.longpaths true`):
+- `unity-mcp/upstream` → [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp). Unity projesine `upstream/MCPForUnity` paketini ekle.
+- `qgis-mcp/upstream` → [jjsantos01/qgis_mcp](https://github.com/jjsantos01/qgis_mcp). `upstream/qgis_mcp_plugin` klasörünü QGIS profili `python/plugins` altına koy; QGIS'te eklentiden sunucuyu başlat. Varsayılan port 9876 Blender ile aynıdır.

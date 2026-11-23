@@ -14,7 +14,7 @@ The **Unity MCP Connector** bridges AI agent capabilities with the Unity Editor 
 ```mermaid
 flowchart LR
     Agent["AI Agent (Codex / Cursor / Claude)"] <-->|MCP JSON-RPC| Bridge["unity_mcp_bridge.py"]
-    Bridge <-->|WebSocket: localhost:8080| UnityEditor["Unity Editor\n(EditorWindow / EditorApplication)"]
+    Bridge <-->|stdio + Unity MCPForUnity paketi| UnityEditor["Unity Editor\n(EditorWindow / EditorApplication)"]
     UnityEditor <--> UnityScene["Active Scene & AssetDatabase"]
 ```
 
@@ -62,5 +62,5 @@ Enters Playmode, executes designated unit or integration test suites, and return
 ## 3. Usage
 
 ```bash
-python mcp-connectors/unity-mcp/unity_mcp_bridge.py --port 8080
+uv --directory mcp-connectors/unity-mcp/upstream/Server run mcp-for-unity --transport stdio
 ```

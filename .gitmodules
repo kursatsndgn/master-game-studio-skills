@@ -1,0 +1,6 @@
+[submodule "mcp-connectors/unity-mcp/upstream"]
+	path = mcp-connectors/unity-mcp/upstream
+	url = https://github.com/CoplayDev/unity-mcp.git
+[submodule "mcp-connectors/qgis-mcp/upstream"]
+	path = mcp-connectors/qgis-mcp/upstream
+	url = https://github.com/jjsantos01/qgis_mcp.git

@@ -25,16 +25,16 @@
       "description": "Godot 4 Editor & SceneTree MCP connector for live scene manipulation and GDScript execution"
     },
     "unity-mcp": {
-      "command": "python",
+      "command": "uv",
       "args": [
-        "mcp-connectors/unity-mcp/unity_mcp_bridge.py",
-        "--port",
-        "8080"
+        "--directory",
+        "mcp-connectors/unity-mcp/upstream/Server",
+        "run",
+        "mcp-for-unity",
+        "--transport",
+        "stdio"
       ],
-      "env": {
-        "UNITY_PORT": "8080"
-      },
-      "description": "Unity Editor MCP connector for GameObject hierarchy, Prefab assembly and Playmode testing"
+      "description": "MCP for Unity (CoplayDev/unity-mcp, submodule). Unity tarafı: Package Manager > Add from disk > mcp-connectors/unity-mcp/upstream/MCPForUnity"
     },
     "unreal-mcp": {
       "command": "python",
@@ -49,16 +49,14 @@
       "description": "Unreal Engine 5 MCP connector for Python Remote Execution, Actor spawning and Nanite/Lumen config"
     },
     "qgis-mcp": {
-      "command": "python",
+      "command": "uv",
       "args": [
-        "mcp-connectors/qgis-mcp/qgis_mcp_bridge.py",
-        "--port",
-        "9877"
+        "--directory",
+        "mcp-connectors/qgis-mcp/upstream/src/qgis_mcp",
+        "run",
+        "qgis_mcp_server.py"
       ],
-      "env": {
-        "QGIS_TCP_PORT": "9877"
-      },
-      "description": "QGIS Desktop MCP connector for automated DEM heightmaps, slope splatmaps, and vector road/river splines"
+      "description": "QGIS MCP (jjsantos01/qgis_mcp, submodule). Eklenti: upstream/qgis_mcp_plugin -> QGIS profili python/plugins; varsayilan port 9876 (Blender ile ayni; ikisi birlikte aciksa eklentide degistir)"
     },
     "open-godot-mcp": {
       "command": "open-godot-mcp",
