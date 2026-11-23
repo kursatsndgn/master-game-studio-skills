@@ -13,7 +13,7 @@ The **Unity MCP Connector** bridges AI agent capabilities with the Unity Editor 
 
 ```mermaid
 flowchart LR
-    Agent["AI Agent (Codex / Cursor / Claude)"] <-->|MCP JSON-RPC| Bridge["unity_mcp_bridge.py"]
+    Agent["AI Agent (Codex / Cursor / Claude)"] <-->|MCP JSON-RPC| Bridge["mcp-for-unity (CoplayDev/unity-mcp)"]
     Bridge <-->|stdio + Unity MCPForUnity paketi| UnityEditor["Unity Editor\n(EditorWindow / EditorApplication)"]
     UnityEditor <--> UnityScene["Active Scene & AssetDatabase"]
 ```

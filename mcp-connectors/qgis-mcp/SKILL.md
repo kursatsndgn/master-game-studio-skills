@@ -13,7 +13,7 @@ The **QGIS MCP Connector** connects AI agents to a live or headless QGIS environ
 
 ```mermaid
 flowchart LR
-    Agent["AI Agent (Codex / Cursor / Claude)"] <-->|MCP JSON-RPC (stdio)| Bridge["qgis_mcp_bridge.py"]
+    Agent["AI Agent (Codex / Cursor / Claude)"] <-->|MCP JSON-RPC (stdio)| Bridge["qgis_mcp_server.py (jjsantos01/qgis_mcp)"]
     Bridge <-->|TCP Socket (Port 9876)| Plugin["QGIS Desktop (QGIS MCP Plugin)"]
     Plugin <--> QGISEngine["QGIS Processing Core (GDAL, GRASS, PyQGIS)"]
 ```

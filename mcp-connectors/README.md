@@ -34,7 +34,7 @@ flowchart TD
    ```bash
    python mcp-connectors/blender-mcp/blender_mcp_bridge.py
    python mcp-connectors/godot-mcp/godot_mcp_bridge.py
-   python mcp-connectors/unity-mcp/unity_mcp_bridge.py
+   uv --directory mcp-connectors/unity-mcp/upstream/Server run mcp-for-unity --transport stdio
    python mcp-connectors/unreal-mcp/unreal_mcp_bridge.py
    ```
 
